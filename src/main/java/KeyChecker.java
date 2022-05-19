@@ -13,7 +13,7 @@ public class KeyChecker extends KeyAdapter {
     public void keyPressed(KeyEvent event) {
         int keyCode = event.getKeyCode();
 
-        System.out.println(getCoursorAfterInput(keyCode, cursor));
+        System.out.println(getCursorAfterInput(keyCode, cursor));
         if (cursor.isPressed()) {
             Connection.sendInputToAppServer(cursor.getPointPayload());
             cursor.setPressed(false);
@@ -22,7 +22,7 @@ public class KeyChecker extends KeyAdapter {
         }
     }
 
-    private Cursor getCoursorAfterInput(int keyCode, Cursor cursor) {
+    private Cursor getCursorAfterInput(int keyCode, Cursor cursor) {
         switch (keyCode) {
             case 32 -> cursor.setPressed(true);
             case 37 -> cursor.changeX(-4);

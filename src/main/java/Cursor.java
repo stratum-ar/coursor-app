@@ -38,7 +38,7 @@ public class Cursor {
 
     @Override
     public String toString() {
-        return "Coursor{" +
+        return "Cursor{" +
                    "x=" + x +
                    ", y=" + y +
                    "}, pressed? = " + isPressed;
