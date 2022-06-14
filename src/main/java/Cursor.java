@@ -46,11 +46,20 @@ public class Cursor {
 
     public byte[] getPointPayload() {
         return new byte[]{
-            (byte) 1,
-            (byte) 29,
-            (byte) x,
-            (byte) y,
-            (byte) 2
+                (byte) 1,
+                (byte) 29,
+                (byte) x,
+                (byte) y,
+                (byte) 2
+        };
+    }
+
+    public byte[] getInputPayload() {
+        return new byte[]{
+                (byte) 1,
+                (byte) x,
+                (byte) y,
+                (byte) 0
         };
     }
 }

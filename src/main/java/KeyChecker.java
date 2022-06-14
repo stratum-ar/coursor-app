@@ -15,7 +15,7 @@ public class KeyChecker extends KeyAdapter {
 
         System.out.println(getCursorAfterInput(keyCode, cursor));
         if (cursor.isPressed()) {
-            Connection.sendInputToAppServer(cursor.getPointPayload());
+            Connection.sendInputToAppServer(cursor.getInputPayload());
             cursor.setPressed(false);
         } else {
             Connection.sendInputToUIServer(cursor.getPointPayload());
